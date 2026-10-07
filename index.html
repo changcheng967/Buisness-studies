@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEP2O Unit 1 — Study Hub</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="topbar" id="topbar">
+  <a class="brand" href="#/home">
+    <span class="brand-logo">📘</span>
+    <span class="brand-text">
+      <strong>BEP2O Unit 1</strong>
+      <small>Study Hub &amp; Mock Tests</small>
+    </span>
+  </a>
+  <nav class="mainnav" id="mainnav">
+    <a href="#/home" data-nav="home">Home</a>
+    <a href="#/notes/types-of-business" data-nav="notes">Study Notes</a>
+    <a href="#/flashcards" data-nav="flashcards">Flashcards</a>
+    <a href="#/quizzes" data-nav="quizzes">Topic Quizzes</a>
+    <a href="#/mock" data-nav="mock">Mock Tests</a>
+  </nav>
+  <button class="iconbtn" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main id="app"></main>
+
+<footer class="footer">
+  <p>Built from your class materials: Study Guide · Lessons 2–10 (Types of Business → Supply &amp; Demand).<br>
+  Test format: 40 marks — 12 MC · 9 Matching · Profit Calculations · 2-of-4 Short Answer · CSR Long Answer.</p>
+</footer>
+
+<button id="toTop" title="Back to top" aria-label="Back to top">↑</button>
+
+<script src="js/data-notes.js?v=4"></script>
+<script src="js/data-quiz.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+</body>
+</html>
