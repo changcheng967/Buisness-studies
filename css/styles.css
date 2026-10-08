@@ -545,3 +545,34 @@ textarea.answer:focus { outline: none; border-color: var(--primary); box-shadow:
   .card { padding: 20px 18px; }
   .topbar { padding: 10px 14px; gap: 10px; }
 }
+
+/* ===== Learn mode ===== */
+.learn-teach { font-size: .96rem; }
+.check-box {
+  margin-top: 18px; padding: 16px 18px; border-radius: 14px;
+  background: color-mix(in srgb, var(--primary-soft) 42%, var(--surface));
+  border: 1px dashed color-mix(in srgb, var(--primary) 40%, transparent);
+}
+
+/* ===== Practice-mode toggle switch ===== */
+.mode-card { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.mode-card > div { flex: 1; min-width: 260px; }
+.switch { position: relative; display: inline-block; width: 54px; height: 30px; flex-shrink: 0; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.switch .slider {
+  position: absolute; inset: 0; cursor: pointer;
+  background: var(--surface-2); border: 1.5px solid var(--border); border-radius: 99px;
+  transition: background .25s, border-color .25s;
+}
+.switch .slider::before {
+  content: ""; position: absolute; height: 22px; width: 22px; left: 3px; top: 2.5px;
+  background: #fff; border-radius: 50%; box-shadow: 0 2px 6px rgba(23, 28, 46, .3);
+  transition: transform .28s var(--spring);
+}
+.switch input:checked + .slider { background: var(--grad); border-color: transparent; }
+.switch input:checked + .slider::before { transform: translateX(24px); }
+
+/* ===== Mastery map bits ===== */
+.stat .num .unit, .score-hero .unit { margin-left: 2px; }
+.badge-row .pill.red { text-decoration: none; cursor: pointer; transition: transform .2s var(--ease); }
+.badge-row .pill.red:hover { transform: translateY(-2px); }

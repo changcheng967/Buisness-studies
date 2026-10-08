@@ -9,6 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+<script>
+window.addEventListener('error', function (e) {
+  var el = document.getElementById('bootErr');
+  if (el) el.textContent = '⚠️ ' + e.message + ' (line ' + e.lineno + ' in ' + (e.filename || '').split('/').pop() + ')';
+});
+</script>
 </head>
 <body>
 <header class="topbar" id="topbar">
@@ -21,15 +27,18 @@
   </a>
   <nav class="mainnav" id="mainnav">
     <a href="#/home" data-nav="home">Home</a>
-    <a href="#/notes/types-of-business" data-nav="notes">Study Notes</a>
+    <a href="#/learn" data-nav="learn">Learn Mode</a>
+    <a href="#/drill" data-nav="drill">Weak Spots</a>
+    <a href="#/notes/types-of-business" data-nav="notes">Notes</a>
     <a href="#/flashcards" data-nav="flashcards">Flashcards</a>
-    <a href="#/quizzes" data-nav="quizzes">Topic Quizzes</a>
+    <a href="#/quizzes" data-nav="quizzes">Quizzes</a>
     <a href="#/mock" data-nav="mock">Mock Tests</a>
   </nav>
   <button class="iconbtn" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
 </header>
 
 <main id="app"></main>
+<pre id="bootErr" style="color:#dc2626;font-size:.8rem;max-width:1140px;margin:0 auto;padding:0 24px"></pre>
 
 <footer class="footer">
   <p>Built from your class materials: Study Guide · Lessons 2–10 (Types of Business → Supply &amp; Demand).<br>
@@ -38,8 +47,9 @@
 
 <button id="toTop" title="Back to top" aria-label="Back to top">↑</button>
 
-<script src="js/data-notes.js?v=4"></script>
-<script src="js/data-quiz.js?v=4"></script>
-<script src="js/app.js?v=4"></script>
+<script src="js/data-notes.js?v=9"></script>
+<script src="js/data-quiz.js?v=9"></script>
+<script src="js/data-learn.js?v=9"></script>
+<script src="js/app.js?v=9"></script>
 </body>
 </html>
